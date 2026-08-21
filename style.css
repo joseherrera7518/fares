@@ -1,0 +1,318 @@
+/* =========================================================
+   ESTILOS - EDICIONES FARES
+   Paleta: blanco y negro (monocromática)
+   ========================================================= */
+
+:root {
+    --negro: #000000;
+    --negro-suave: #1a1a1a;
+    --gris-oscuro: #333333;
+    --gris-medio: #666666;
+    --gris-claro: #cccccc;
+    --gris-muy-claro: #f2f2f2;
+    --blanco: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--blanco);
+    color: var(--negro);
+    font-family: "Segoe UI", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: var(--negro);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--gris-medio);
+    text-decoration: underline;
+}
+
+.contenedor-principal {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--blanco);
+    min-height: 100vh;
+    border-left: 1px solid var(--gris-claro);
+    border-right: 1px solid var(--gris-claro);
+}
+
+/* ENCABEZADO */
+.encabezado {
+    background-color: var(--negro);
+    color: var(--blanco);
+    padding: 24px 20px;
+    text-align: center;
+    border-bottom: 4px solid var(--negro);
+}
+
+.encabezado h1 {
+    margin: 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+/* MENÚ */
+.menu {
+    background-color: var(--negro-suave);
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--gris-oscuro);
+}
+
+.menu a {
+    color: var(--blanco);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    padding: 6px 10px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+.menu a:hover {
+    border-bottom: 2px solid var(--blanco);
+    text-decoration: none;
+}
+
+/* CONTENIDO */
+.contenido {
+    padding: 30px 20px;
+}
+
+/* MENSAJES / ALERTAS */
+.mensaje,
+.alert {
+    border: 1px solid var(--negro);
+    background-color: var(--gris-muy-claro);
+    color: var(--negro);
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.alert-primary {
+    border-left: 5px solid var(--negro);
+}
+
+.alert-danger {
+    border-left: 5px solid var(--gris-oscuro);
+    background-color: var(--gris-claro);
+}
+
+.alert-success {
+    border-left: 5px solid var(--negro);
+    background-color: var(--gris-muy-claro);
+}
+
+/* CONTENEDOR DE CLIENTES / PRODUCTOS */
+.clientes-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.formulario-cliente,
+.clientes-registrados {
+    background-color: var(--blanco);
+    border: 1px solid var(--gris-claro);
+    border-radius: 6px;
+    flex: 1;
+    min-width: 300px;
+    overflow: hidden;
+}
+
+.titulo-formulario,
+.titulo-clientes {
+    background-color: var(--negro);
+    color: var(--blanco);
+    padding: 14px 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.95rem;
+}
+
+.formulario-contenido {
+    padding: 20px;
+}
+
+/* FORMULARIOS */
+.form-group label {
+    font-weight: 600;
+    color: var(--negro);
+    margin-bottom: 4px;
+}
+
+.form-control {
+    border: 1px solid var(--gris-claro);
+    border-radius: 4px;
+    background-color: var(--blanco);
+    color: var(--negro);
+}
+
+.form-control:focus {
+    border-color: var(--negro);
+    box-shadow: 0 0 0 0.15rem rgba(0, 0, 0, 0.15);
+}
+
+/* BOTONES */
+.btn {
+    border-radius: 4px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.btn-fares {
+    background-color: var(--negro);
+    color: var(--blanco);
+    border: 1px solid var(--negro);
+}
+
+.btn-fares:hover {
+    background-color: var(--blanco);
+    color: var(--negro);
+    border: 1px solid var(--negro);
+}
+
+.btn-warning {
+    background-color: var(--gris-claro);
+    color: var(--negro);
+    border: 1px solid var(--negro);
+}
+
+.btn-warning:hover {
+    background-color: var(--gris-medio);
+    color: var(--blanco);
+}
+
+.btn-danger {
+    background-color: var(--negro);
+    color: var(--blanco);
+    border: 1px solid var(--negro);
+}
+
+.btn-danger:hover {
+    background-color: var(--gris-oscuro);
+}
+
+.btn-success {
+    background-color: var(--negro);
+    color: var(--blanco);
+    border: 1px solid var(--negro);
+}
+
+.btn-success:hover {
+    background-color: var(--gris-oscuro);
+}
+
+.btn-secondary {
+    background-color: var(--blanco);
+    color: var(--negro);
+    border: 1px solid var(--negro);
+}
+
+.btn-secondary:hover {
+    background-color: var(--gris-muy-claro);
+}
+
+/* TABLAS */
+.table-responsive {
+    padding: 0 15px 15px;
+}
+
+.tabla-clientes {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabla-clientes thead {
+    background-color: var(--negro);
+    color: var(--blanco);
+}
+
+.tabla-clientes th,
+.tabla-clientes td {
+    border: 1px solid var(--gris-claro);
+    padding: 10px 12px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.tabla-clientes tbody tr:nth-child(even) {
+    background-color: var(--gris-muy-claro);
+}
+
+.tabla-clientes tbody tr:hover {
+    background-color: var(--gris-claro);
+}
+
+.acciones {
+    white-space: nowrap;
+}
+
+.acciones .btn {
+    margin-right: 5px;
+}
+
+/* PAGINACIÓN */
+.paginacion {
+    padding: 15px;
+}
+
+.pagination .page-link {
+    color: var(--negro);
+    border: 1px solid var(--gris-claro);
+}
+
+.pagination .page-item.active .page-link {
+    background-color: var(--negro);
+    border-color: var(--negro);
+    color: var(--blanco);
+}
+
+.pagination .page-link:hover {
+    background-color: var(--gris-muy-claro);
+    color: var(--negro);
+}
+
+/* TARJETAS (frmeditarcliente.php) */
+.card {
+    border: 1px solid var(--gris-claro);
+    border-radius: 6px;
+}
+
+.card-header {
+    background-color: var(--negro) !important;
+    color: var(--blanco) !important;
+    border-bottom: 1px solid var(--gris-oscuro);
+}
+
+.bg-primary {
+    background-color: var(--negro) !important;
+}
+
+.text-white {
+    color: var(--blanco) !important;
+}
+
+/* PIE */
+.pie {
+    background-color: var(--negro);
+    color: var(--blanco);
+    text-align: center;
+    padding: 16px;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
